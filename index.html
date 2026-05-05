@@ -961,7 +961,7 @@ function batchCard(d){
  </div>
  </div>`;
  w.appendChild(wrap);
- wrap.scrollIntoView({behavior:'smooth',block:'start'});
+ wrap.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
 function bPick(btn){
@@ -1055,7 +1055,7 @@ function byeCard(text){
 
 function show(v){document.getElementById('typing').style.display=v?'block':'none';sb();}
 function dis(v){document.getElementById('send-btn').disabled=v;}
-function sb(){const m=document.getElementById('messages');m.scrollTop=0;}
+function sb(){const m=document.getElementById('messages');m.scrollTop=m.scrollHeight;}
 
 
 /* ── SharePoint upload via Power Automate ── */
