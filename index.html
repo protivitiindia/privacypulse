@@ -868,8 +868,8 @@ function showIntakeForm(){
  dis(true); 
  document.getElementById('inp').style.display='none';
  setTimeout(()=>{
- window.scrollTo({top: 0, behavior: 'smooth'});
- }, 10);
+div.scrollIntoView({behavior: 'smooth', block: 'start'});
+window.scrollBy(0, -150); // scroll up by 80px after }, 100);
 }
 
 function submitIntake(){
