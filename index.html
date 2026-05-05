@@ -865,7 +865,11 @@ function showIntakeForm(){
       <button class="intake-submit" onclick="submitIntake()">Start Assessment →</button>
     </div>`;
  w.appendChild(div);sb();
- dis(true); document.getElementById('inp').style.display='none';
+ dis(true); 
+ document.getElementById('inp').style.display='none';
+ setTimeout(()=>{ 
+  div.scrollIntoView({behavior: 'smooth', block: 'start'});
+ }, 100);
 }
 
 function submitIntake(){
