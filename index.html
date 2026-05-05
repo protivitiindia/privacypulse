@@ -917,7 +917,14 @@ function qcard(d){
  <span class="q-domain">${d.d}</span><div class="q-sub"> ${d.s}</div>
  <div class="q-text">Q${d.cur} of ${d.tot}: ${d.q}</div>
  <div class="q-options">${opts}</div></div>`;
- w.appendChild(div);sb();
+ w.appendChild(div);
+ 
+setTimeout(()=>{
+ 
+div.scrollIntoView({behavior: 'smooth', block: 'start'});
+ 
+},50);
+ 
 }
 
 function pick(btn,val,lbl){
@@ -1202,7 +1209,7 @@ function showRestartModal(){
 function showGoodbyeModal(){
   document.getElementById('restartModal').style.display='none';
   document.getElementById('goodbye-msg').innerHTML=
-    `Thank you, <b>${S.name||'there'}</b>! Have a great day! 🎉<br><br>
+    `Thank you, <b>${S.name||'there'}</b>! Have a great day! <br><br>
     <span style="font-size:13px;opacity:0.85">Your Privacy Maturity Report has been saved.<br>
     Refresh the page anytime to run a new assessment.</span>`;
   document.getElementById('goodbyeModal').style.display='block';
